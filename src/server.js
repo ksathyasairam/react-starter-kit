@@ -32,6 +32,8 @@ import schema from './data/schema';
 import chunks from './chunk-manifest.json'; // eslint-disable-line import/no-unresolved
 import config from './config';
 
+require('./db.js');
+
 process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at:', p, 'reason:', reason);
   // send entire app down. Process manager will restart it
