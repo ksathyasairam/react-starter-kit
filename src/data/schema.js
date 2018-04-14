@@ -7,16 +7,14 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import {
-  GraphQLSchema as Schema,
-  GraphQLObjectType as ObjectType,
-} from 'graphql';
+import { GraphQLSchema as Schema } from 'graphql';
 
-import Query from './queries/query'
+import Query from './queries/query';
+import Mutation from './mutations/mutation';
 
 const schema = new Schema({
   query: Query,
-  mutation: Mutation, 
+  mutation: Mutation,
 });
 
 export default schema;
